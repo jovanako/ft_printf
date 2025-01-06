@@ -3,10 +3,9 @@ int		write_str(char *s)
 	int		count;
 
 	count = 0;
-	while (*s != '\0')
+	while (s[count] != '\0')
 	{
-		write (1, s, 1);
-		s++;
+		write (1, &s[count], 1);
 		count++;
 	}
 	free(s);

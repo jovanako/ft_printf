@@ -24,6 +24,10 @@ static int  argument_to_print(const char *format, va_list args)
         count += string_argument(args);
     else if (*format == 'p')
         count += pointer_argument(args);
+    else if (*format == 'd' || *format == 'i')
+        count += int_argument(args);
+    else if (*format == 'u')
+        count += unsigned_d_argument(args);
     return (count);
 } 
 

@@ -42,7 +42,7 @@ static char	*generate_string(char *result, long num,
 	return (result);
 }
 
-char	*ft_itoa(int n)
+int		ft_itoa(int n)
 {
 	size_t	int_len;
 	size_t	res_len;
@@ -57,15 +57,14 @@ char	*ft_itoa(int n)
 		num *= -1;
 	result = (char *)malloc(res_len * sizeof(char) + 1);
 	if (!result)
-		return (NULL);
+		return (0);
 	result[res_len] = '\0';
 	if (num == 0)
 	{
 		result[0] = '0';
-		return (result);
+		count =  write_str(result);
 	}
 	result = generate_string(result, num, int_len, res_len);
     count = write_str(result);
-    free(result);
 	return (count);
 }
