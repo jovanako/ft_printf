@@ -23,5 +23,8 @@ int		ft_printf(const char *format, ...);
 int		char_argument(va_list args);
 int		string_argument(va_list args);
 int		pointer_argument(va_list args);
+int		int_argument(va_list args);
+int		unsigned_d_argument(va_list args);
+int		percent_sign_argument();
 
 #endif

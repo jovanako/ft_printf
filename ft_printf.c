@@ -28,6 +28,8 @@ static int  argument_to_print(const char *format, va_list args)
         count += int_argument(args);
     else if (*format == 'u')
         count += unsigned_d_argument(args);
+    else if (*format == '%')
+        count += percent_sign_argument();
     return (count);
 } 
 
