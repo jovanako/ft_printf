@@ -17,21 +17,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-int		write_str(char *s)
-{
-	int		count;
-
-	count = 0;
-	while (*s != '\0')
-	{
-		write (1, s, 1);
-		s++;
-		count++;
-	}
-	free(s);
-	return (count);
-}
-
+int		write_str(char *s);
+char	*ft_itoa(int n);
 int		ft_printf(const char *format, ...);
 int		char_argument(va_list args);
 int		string_argument(va_list args);

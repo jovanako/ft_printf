@@ -18,7 +18,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 DEPS = libftprintf.h
 
-SRCS = ft_printf.c char_argument.c string_argument.c pointer_argument.c
+SRCS = ft_printf.c \
+	 arg_conversions/char_argument.c \
+	 arg_conversions/string_argument.c \
+	 arg_conversions/pointer_argument.c \
+	 arg_conversions/int_argument.c \
+	 arg_conversions/unsigned_d_argument.c \
+	 helpers/ft_itoa.c
+	 helpers/write_str.c
 
 OBJS = $(SRCS:.c=.o)
 
