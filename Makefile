@@ -24,6 +24,8 @@ SRCS = ft_printf.c \
 	 arg_conversions/pointer_argument.c \
 	 arg_conversions/int_argument.c \
 	 arg_conversions/unsigned_d_argument.c \
+	 arg_conversions/hex_low_argument.c \
+	 arg_conversions/hex_up_argument.c \
 	 arg_conversions/percent_sign_argument.c \
 	 helpers/write_str.c \
 	 helpers/ft_itoa.c \

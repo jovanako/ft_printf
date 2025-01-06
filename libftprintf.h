@@ -26,6 +26,8 @@ int		string_argument(va_list args);
 int		pointer_argument(va_list args);
 int		int_argument(va_list args);
 int		unsigned_d_argument(va_list args);
+int		hex_low_argument(va_list args);
+int		hex_up_argument(va_list args);
 int		percent_sign_argument();
 
 #endif
