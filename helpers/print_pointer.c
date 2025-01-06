@@ -54,7 +54,7 @@ int     print_pointer(void *p)
     if (p == NULL)
         p_null(result, count_hex);
     count_hex--;
-    result = generate_hex_string(address_decimal, count_hex, result);
+    result = to_lower(generate_hex_string(address_decimal, count_hex, result));
     count = write_str(result);
     return (count);
 }

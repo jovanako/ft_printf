@@ -29,7 +29,11 @@ SRCS = ft_printf.c \
 	 arg_conversions/percent_sign_argument.c \
 	 helpers/write_str.c \
 	 helpers/ft_itoa.c \
-	 helpers/unsigned_itoa.c
+	 helpers/unsigned_itoa.c \
+	 helpers/print_pointer.c \
+	 helpers/print_hexadecimal.c \
+	 helpers/to_lower.c \
+	 helpers/to_upper.c
 
 OBJS = $(SRCS:.c=.o)
 

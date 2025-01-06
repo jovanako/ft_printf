@@ -20,6 +20,10 @@
 int		write_str(char *s);
 int		ft_itoa(int n);
 int		unsigned_itoa(int n);
+int		print_pointer(void *p);
+char	*print_hexadecimal(int n);
+int		to_lower(int c);
+int		to_upper(int c);
 int		ft_printf(const char *format, ...);
 int		char_argument(va_list args);
 int		string_argument(va_list args);
