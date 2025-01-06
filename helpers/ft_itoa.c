@@ -34,8 +34,9 @@ static char	*generate_string(char *result, long num,
 	i = res_len - 1;
 	while ((i >= (res_len - int_len)) && num > 0)
 	{
-		result[i--] = (num % 10) + '0';
+		result[i] = (num % 10) + '0';
 		num /= 10;
+		i--;
 	}
 	if (i == 0)
 		result[i] = '-';
@@ -63,6 +64,7 @@ int		ft_itoa(int n)
 	{
 		result[0] = '0';
 		count =  write_str(result);
+		return (count);
 	}
 	result = generate_string(result, num, int_len, res_len);
     count = write_str(result);

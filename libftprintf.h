@@ -19,6 +19,7 @@
 
 int		write_str(char *s);
 int		ft_itoa(int n);
+int		unsigned_itoa(int n);
 int		ft_printf(const char *format, ...);
 int		char_argument(va_list args);
 int		string_argument(va_list args);

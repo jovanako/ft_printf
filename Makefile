@@ -25,8 +25,9 @@ SRCS = ft_printf.c \
 	 arg_conversions/int_argument.c \
 	 arg_conversions/unsigned_d_argument.c \
 	 arg_conversions/percent_sign_argument.c \
+	 helpers/write_str.c \
 	 helpers/ft_itoa.c \
-	 helpers/write_str.c
+	 helpers/unsigned_itoa.c
 
 OBJS = $(SRCS:.c=.o)
 
