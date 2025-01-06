@@ -1,3 +1,5 @@
+#include "../libftprintf.h"
+
 int     pointer_argument(va_list args)
 {
     void    *p;

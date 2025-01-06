@@ -1,10 +1,17 @@
-#include "libftprintf.h"
+#include "../libftprintf.h"
 
-int	to_lower(int c)
+char	*to_lower(char *s)
 {
-	if ((char)c >= 'A' && (char)c <= 'Z')
+	int		i;
+
+	i = 0;
+	while (s[i])
 	{
-		return (c + 32);
+		if (s[i] >= 'A' && s[i] <= 'Z')
+		{
+			s[i] += 32;
+		}
+		i++;
 	}
-	return (c);
+	return (s);
 }

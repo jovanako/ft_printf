@@ -1,10 +1,17 @@
-#include "libftprintf.h"
+#include "../libftprintf.h"
 
-int	to_upper(int c)
+char	*to_upper(char *s)
 {
-	if ((char)c >= 'a' && (char)c <= 'z')
+	int		i;
+
+	i = 0;
+	while (s[i])
 	{
-		return (c - 32);
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] -= 32;
+		}
+		i++;
 	}
-	return (c);
+	return (s);
 }

@@ -15,7 +15,6 @@
 static int  argument_to_print(const char *format, va_list args)
 {
     int     count;
-    char    c;
 
     count = 0;
     if (*format == 'c')
@@ -32,7 +31,7 @@ static int  argument_to_print(const char *format, va_list args)
         count += hex_low_argument(args);
     else if (*format == 'X')
         count += hex_up_argument(args);
-    else (*format == '%')
+    else if (*format == '%')
         count += percent_sign_argument();
     return (count);
 }

@@ -1,3 +1,5 @@
+#include "../libftprintf.h"
+
 int		write_str(char *s)
 {
 	int		count;

@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "../libftprintf.h"
 
 static int     count_hex_digits(int n)
 {
@@ -44,8 +44,7 @@ char     *print_hexadecimal(int n)
     if (n == 0)
     {
         result[2] = '0';
-        count = write_str(result);
-        return (count);
+        return (result);
     }
     count_hex--;
     result = generate_hex_string(n, count_hex, result);
