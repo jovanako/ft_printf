@@ -16,7 +16,7 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-DEPS = libftprintf.h
+DEPS = ft_printf.h
 
 SRCS = ft_printf.c \
 	 arg_conversions/char_argument.c \

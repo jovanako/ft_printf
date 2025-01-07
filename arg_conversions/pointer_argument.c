@@ -1,9 +1,9 @@
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
-int     pointer_argument(va_list args)
+int	pointer_argument(va_list args)
 {
-    void    *p;
+	void	*p;
 
-    p = va_arg(args, void *);
-    return (print_pointer(p));
+	p = va_arg(args, void *);
+	return (print_pointer(p));
 }

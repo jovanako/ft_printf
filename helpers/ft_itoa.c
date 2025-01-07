@@ -1,4 +1,4 @@
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
 static size_t	calculate_int_length(long n)
 {
@@ -43,12 +43,12 @@ static char	*generate_string(char *result, long num,
 	return (result);
 }
 
-int		ft_itoa(int n)
+int	ft_itoa(int n)
 {
 	size_t	int_len;
 	size_t	res_len;
 	long	num;
-    int     count;
+	int		count;
 	char	*result;
 
 	num = n;
@@ -63,10 +63,10 @@ int		ft_itoa(int n)
 	if (num == 0)
 	{
 		result[0] = '0';
-		count =  write_str(result);
+		count = write_str(result);
 		return (count);
 	}
 	result = generate_string(result, num, int_len, res_len);
-    count = write_str(result);
+	count = write_str(result);
 	return (count);
 }

@@ -1,8 +1,8 @@
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
-int		write_str(char *s)
+int	write_str(char *s)
 {
-	int		count;
+	int	count;
 
 	count = 0;
 	while (s[count] != '\0')

@@ -1,8 +1,8 @@
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
 char	*to_upper(char *s)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (s[i])

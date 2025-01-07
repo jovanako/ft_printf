@@ -1,10 +1,10 @@
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
-int     char_argument(va_list args)
+int	char_argument(va_list args)
 {
-    char    c;
+	char	c;
 
-    c = va_arg(args, int);
-    write (1, &c, 1);
-    return (1);
+	c = va_arg(args, int);
+	write (1, &c, 1);
+	return (1);
 }

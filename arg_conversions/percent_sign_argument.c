@@ -1,10 +1,10 @@
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
-int     percent_sign_argument()
+int	percent_sign_argument(void)
 {
-    char    c;
+	char	c;
 
-    c = '%';
-    write (1, &c, 1);
-    return (1);
+	c = '%';
+	write (1, &c, 1);
+	return (1);
 }
