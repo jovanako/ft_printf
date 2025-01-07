@@ -49,11 +49,13 @@ int	ft_printf(const char *format, ...)
 		{
 			format++;
 			count += argument_to_print(format, args);
-			format++;
 		}
-		write (1, format, 1);
-		format++;
-		count++;
+        else
+        {
+            write (1, format, 1);
+        }
+        format++;
+        count++;
 	}
 	va_end(args);
 	return (count);
