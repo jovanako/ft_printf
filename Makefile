@@ -6,7 +6,7 @@
 #    By: jkovacev <jkovacev@student.42berlin.d      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/11 11:46:37 by jkovacev          #+#    #+#              #
-#    Updated: 2024/12/11 11:52:31 by jkovacev         ###   ########.fr        #
+#    Updated: 2025/01/08 12:15:21 by jkovacev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,4 +54,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-

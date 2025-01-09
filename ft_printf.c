@@ -6,7 +6,7 @@
 /*   By: jkovacev <jkovacev@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 11:15:59 by jkovacev          #+#    #+#             */
-/*   Updated: 2024/12/11 11:44:17 by jkovacev         ###   ########.fr       */
+/*   Updated: 2025/01/08 12:13:13 by jkovacev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ int	ft_printf(const char *format, ...)
 			format++;
 			count += argument_to_print(format, args);
 		}
-        else
-        {
-            write (1, format, 1);
-        }
-        format++;
-        count++;
+		else
+		{
+			write (1, format, 1);
+		}
+		format++;
+		count++;
 	}
 	va_end(args);
 	return (count);
