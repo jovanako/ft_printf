@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   percent_sign_argument.c                            :+:      :+:    :+:   */
+/*   hex_up_argument.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkovacev <jkovacev@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 12:04:54 by jkovacev          #+#    #+#             */
-/*   Updated: 2025/01/08 12:04:58 by jkovacev         ###   ########.fr       */
+/*   Created: 2025/01/08 12:03:48 by jkovacev          #+#    #+#             */
+/*   Updated: 2025/01/08 12:03:52 by jkovacev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	percent_sign_argument(void)
+static char	*to_upper(char *s)
 {
-	char	c;
+	int	i;
 
-	c = '%';
-	write (1, &c, 1);
-	return (1);
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] -= 32;
+		}
+		i++;
+	}
+	return (s);
+}
+
+int	print_hex_up(int n)
+{
+	int		count;
+	char	*result;
+
+	result = to_upper(print_hexadecimal(n));
+	count = write_str(result);
+	return (count);
 }

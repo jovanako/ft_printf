@@ -18,20 +18,14 @@
 # include <stdarg.h>
 
 int		write_str(char *s);
-int		ft_itoa(int n);
-int		unsigned_itoa(int n);
-int		print_pointer(void *p);
 char	*print_hexadecimal(int n);
-char	*to_lower(char *s);
-char	*to_upper(char *s);
 int		ft_printf(const char *format, ...);
-int		char_argument(va_list args);
-int		string_argument(va_list args);
-int		pointer_argument(va_list args);
-int		int_argument(va_list args);
-int		unsigned_d_argument(va_list args);
-int		hex_low_argument(va_list args);
-int		hex_up_argument(va_list args);
-int		percent_sign_argument(void);
+int		print_char(char c);
+int		print_string(char *str);
+int		print_pointer(void *p);
+int		print_int(int n);
+int		print_unsigned(int n);
+int		print_hex_low(int n);
+int		print_hex_up(int n);
 
 #endif

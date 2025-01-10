@@ -19,21 +19,15 @@ CFLAGS = -Wall -Wextra -Werror
 DEPS = ft_printf.h
 
 SRCS = ft_printf.c \
-	 arg_conversions/char_argument.c \
-	 arg_conversions/string_argument.c \
-	 arg_conversions/pointer_argument.c \
-	 arg_conversions/int_argument.c \
-	 arg_conversions/unsigned_d_argument.c \
-	 arg_conversions/hex_low_argument.c \
-	 arg_conversions/hex_up_argument.c \
-	 arg_conversions/percent_sign_argument.c \
+	 arg_conversions/print_char.c \
+	 arg_conversions/print_string.c \
+	 arg_conversions/print_pointer.c \
+	 arg_conversions/print_int.c \
+	 arg_conversions/print_unsigned.c \
+	 arg_conversions/print_hex_low.c \
+	 arg_conversions/print_hex_up.c \
 	 helpers/write_str.c \
-	 helpers/ft_itoa.c \
-	 helpers/unsigned_itoa.c \
-	 helpers/print_pointer.c \
-	 helpers/print_hexadecimal.c \
-	 helpers/to_lower.c \
-	 helpers/to_upper.c
+	 helpers/print_hexadecimal.c
 
 OBJS = $(SRCS:.c=.o)
 

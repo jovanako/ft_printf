@@ -18,21 +18,21 @@ static int	argument_to_print(const char *format, va_list args)
 
 	count = 0;
 	if (*format == 'c')
-		count += char_argument(args);
+		count += print_char(va_arg(args, int));
 	else if (*format == 's')
-		count += string_argument(args);
+		count += print_string(va_arg(args, char *));
 	else if (*format == 'p')
-		count += pointer_argument(args);
+		count += print_pointer(va_arg(args, void *));
 	else if (*format == 'd' || *format == 'i')
-		count += int_argument(args);
+		count += print_int(va_arg(args, int));
 	else if (*format == 'u')
-		count += unsigned_d_argument(args);
+		count += print_unsigned(va_arg(args, int));
 	else if (*format == 'x')
-		count += hex_low_argument(args);
+		count += print_hex_low(va_arg(args, int));
 	else if (*format == 'X')
-		count += hex_up_argument(args);
+		count += print_hex_up(va_arg(args, int));
 	else if (*format == '%')
-		count += percent_sign_argument();
+		count += print_char('%');
 	return (count);
 }
 

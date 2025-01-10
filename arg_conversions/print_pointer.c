@@ -41,13 +41,6 @@ static char	*generate_hex_string(unsigned long n, int i, char *result)
 	return (result);
 }
 
-static int	p_null(char *s, int count)
-{
-	s[2] = '0';
-	count = write_str(s);
-	return (count);
-}
-
 int	print_pointer(void *p)
 {
 	unsigned long	address_decimal;
@@ -55,6 +48,8 @@ int	print_pointer(void *p)
 	int				count;
 	char			*result;
 
+	if (p == NULL)
+		return (print_string("(nil)"));
 	address_decimal = (unsigned long)p;
 	count_hex = count_hex_digits(address_decimal) + 2;
 	result = (char *)malloc((count_hex + 1) * sizeof(char));
@@ -63,10 +58,8 @@ int	print_pointer(void *p)
 	result[count_hex] = '\0';
 	result[0] = '0';
 	result[1] = 'x';
-	if (p == NULL)
-		return (p_null(result, count_hex));
 	count_hex--;
-	result = to_lower(generate_hex_string(address_decimal, count_hex, result));
+	result = generate_hex_string(address_decimal, count_hex, result);
 	count = write_str(result);
 	return (count);
 }

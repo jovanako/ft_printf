@@ -55,7 +55,7 @@ static char	*generate_string(char *result, long num,
 	return (result);
 }
 
-int	ft_itoa(int n)
+int	print_int(int n)
 {
 	size_t	int_len;
 	size_t	res_len;

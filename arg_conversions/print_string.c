@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   to_lower.c                                         :+:      :+:    :+:   */
+/*   string_argument.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkovacev <jkovacev@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 12:01:21 by jkovacev          #+#    #+#             */
-/*   Updated: 2025/01/08 12:01:29 by jkovacev         ###   ########.fr       */
+/*   Created: 2025/01/08 12:05:29 by jkovacev          #+#    #+#             */
+/*   Updated: 2025/01/08 12:05:35 by jkovacev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char	*to_lower(char *s)
+int	print_string(char *str)
 {
-	int	i;
+	int		count;
 
-	i = 0;
-	while (s[i])
+	count = 0;
+	while (str[count] != '\0')
 	{
-		if (s[i] >= 'A' && s[i] <= 'Z')
-		{
-			s[i] += 32;
-		}
-		i++;
+		write (1, &str[count], 1);
+		count++;
 	}
-	return (s);
+	return (count);
 }

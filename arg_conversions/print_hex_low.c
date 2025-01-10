@@ -1,21 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   int_argument.c                                     :+:      :+:    :+:   */
+/*   hex_low_argument.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkovacev <jkovacev@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 12:04:10 by jkovacev          #+#    #+#             */
-/*   Updated: 2025/01/08 12:04:14 by jkovacev         ###   ########.fr       */
+/*   Created: 2025/01/08 12:03:28 by jkovacev          #+#    #+#             */
+/*   Updated: 2025/01/08 12:03:31 by jkovacev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	int_argument(va_list args)
+static char	*to_lower(char *s)
 {
-	int	n;
+	int	i;
 
-	n = va_arg(args, int);
-	return (ft_itoa(n));
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] >= 'A' && s[i] <= 'Z')
+		{
+			s[i] += 32;
+		}
+		i++;
+	}
+	return (s);
+}
+
+int	print_hex_low(int n)
+{
+	int		count;
+	char	*result;
+
+	result = to_lower(print_hexadecimal(n));
+	count = write_str(result);
+	return (count);
 }

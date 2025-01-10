@@ -38,7 +38,7 @@ static char	*generate_string(char *result, unsigned int n, int int_len)
 	return (result);
 }
 
-int	unsigned_itoa(int n)
+int	print_unsigned(int n)
 {
 	int		int_len;
 	int		count;
