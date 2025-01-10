@@ -33,7 +33,7 @@ int	print_hex_up(int n)
 	int		count;
 	char	*result;
 
-	result = to_upper(print_hexadecimal(n));
+	result = to_upper(print_hexadecimal((unsigned int)n));
 	count = write_str(result);
 	return (count);
 }

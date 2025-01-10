@@ -33,7 +33,7 @@ int	print_hex_low(int n)
 	int		count;
 	char	*result;
 
-	result = to_lower(print_hexadecimal(n));
+	result = to_lower(print_hexadecimal((unsigned int)n));
 	count = write_str(result);
 	return (count);
 }

@@ -12,14 +12,14 @@
 
 #include "../ft_printf.h"
 
-static int	count_hex_digits(int n)
+static int	count_hex_digits(unsigned int n)
 {
 	int	count;
 
 	if (n == 0)
 		return (1);
 	count = 0;
-	while (n > 0)
+	while (n != 0)
 	{
 		n /= 16;
 		count++;
@@ -27,12 +27,12 @@ static int	count_hex_digits(int n)
 	return (count);
 }
 
-static char	*generate_hex_string(int n, int i, char *result)
+static char	*generate_hex_string(unsigned int n, int i, char *result)
 {
 	const char	*hex_digits;
 
 	hex_digits = "0123456789abcdef";
-	while (n > 0)
+	while (n != 0)
 	{
 		result[i] = hex_digits[n % 16];
 		n /= 16;
@@ -41,7 +41,7 @@ static char	*generate_hex_string(int n, int i, char *result)
 	return (result);
 }
 
-char	*print_hexadecimal(int n)
+char	*print_hexadecimal(unsigned int n)
 {
 	int		count_hex;
 	char	*result;
