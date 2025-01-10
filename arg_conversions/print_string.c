@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string_argument.c                                  :+:      :+:    :+:   */
+/*   print_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkovacev <jkovacev@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,13 +14,11 @@
 
 int	print_string(char *str)
 {
-	int		count;
+	char	*s_nil;
 
-	count = 0;
-	while (str[count] != '\0')
-	{
-		write (1, &str[count], 1);
-		count++;
-	}
-	return (count);
+	s_nil = "(null)";
+	if (str == NULL)
+		return (ft_putstr(s_nil));
+	else
+		return (ft_putstr(str));
 }

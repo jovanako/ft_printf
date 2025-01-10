@@ -49,7 +49,7 @@ int	print_pointer(void *p)
 	char			*result;
 
 	if (p == NULL)
-		return (print_string("(nil)"));
+		return (ft_putstr("(nil)"));
 	address_decimal = (unsigned long)p;
 	count_hex = count_hex_digits(address_decimal) + 2;
 	result = (char *)malloc((count_hex + 1) * sizeof(char));

@@ -19,6 +19,7 @@
 
 int		write_str(char *s);
 char	*print_hexadecimal(int n);
+int		ft_putstr(char *s);
 int		ft_printf(const char *format, ...);
 int		print_char(char c);
 int		print_string(char *str);

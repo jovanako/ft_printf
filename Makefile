@@ -27,7 +27,8 @@ SRCS = ft_printf.c \
 	 arg_conversions/print_hex_low.c \
 	 arg_conversions/print_hex_up.c \
 	 helpers/write_str.c \
-	 helpers/print_hexadecimal.c
+	 helpers/print_hexadecimal.c \
+	 helpers/ft_putstr.c
 
 OBJS = $(SRCS:.c=.o)
 
