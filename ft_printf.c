@@ -53,9 +53,9 @@ int	ft_printf(const char *format, ...)
 		else
 		{
 			write (1, format, 1);
+			count++;
 		}
 		format++;
-		count++;
 	}
 	va_end(args);
 	return (count);

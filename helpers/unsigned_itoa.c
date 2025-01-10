@@ -12,9 +12,9 @@
 
 #include "../ft_printf.h"
 
-static size_t	calculate_int_length(unsigned int n)
+static int	calculate_int_length(unsigned int n)
 {
-	size_t	int_len;
+	int	int_len;
 
 	int_len = 0;
 	if (n == 0)
@@ -27,9 +27,9 @@ static size_t	calculate_int_length(unsigned int n)
 	return (int_len);
 }
 
-static char	*generate_string(char *result, unsigned int n, size_t int_len)
+static char	*generate_string(char *result, unsigned int n, int int_len)
 {
-	while (int_len && n)
+	while ((int_len >= 0) && n)
 	{
 		result[int_len] = (n % 10) + '0';
 		n /= 10;
@@ -40,7 +40,7 @@ static char	*generate_string(char *result, unsigned int n, size_t int_len)
 
 int	unsigned_itoa(int n)
 {
-	size_t	int_len;
+	int		int_len;
 	int		count;
 	char	*result;
 

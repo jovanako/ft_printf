@@ -46,16 +46,14 @@ char	*print_hexadecimal(int n)
 	int		count_hex;
 	char	*result;
 
-	count_hex = count_hex_digits(n) + 2;
+	count_hex = count_hex_digits(n);
 	result = (char *)malloc((count_hex + 1) * sizeof(char));
 	if (result == NULL)
 		return (0);
 	result[count_hex] = '\0';
-	result[0] = '0';
-	result[1] = 'x';
 	if (n == 0)
 	{
-		result[2] = '0';
+		result[0] = '0';
 		return (result);
 	}
 	count_hex--;
