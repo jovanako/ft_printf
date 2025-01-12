@@ -48,6 +48,8 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
+			if (is_valid_format_string(*format) == 0)
+				return (-1);
 			count += argument_to_print(format, args);
 		}
 		else

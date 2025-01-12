@@ -28,7 +28,8 @@ SRCS = ft_printf.c \
 	 arg_conversions/print_hex_up.c \
 	 helpers/write_str.c \
 	 helpers/print_hexadecimal.c \
-	 helpers/ft_putstr.c
+	 helpers/ft_putstr.c \
+	 helpers/is_valid_format_string.c
 
 OBJS = $(SRCS:.c=.o)
 

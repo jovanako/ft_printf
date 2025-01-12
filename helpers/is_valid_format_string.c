@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex_up.c                                     :+:      :+:    :+:   */
+/*   is_valid_format_string.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkovacev <jkovacev@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 12:03:48 by jkovacev          #+#    #+#             */
-/*   Updated: 2025/01/08 12:03:52 by jkovacev         ###   ########.fr       */
+/*   Created: 2025/01/08 12:00:34 by jkovacev          #+#    #+#             */
+/*   Updated: 2025/01/08 12:00:45 by jkovacev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-static char	*to_upper(char *s)
+int	is_valid_format_string(char c)
 {
-	int	i;
+	const char	*set;
 
-	i = 0;
-	while (s[i])
+	set = "cspdiuxX%";
+	while (*set)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-		{
-			s[i] -= 32;
-		}
-		i++;
+		if (c == *set)
+			return (1);
+		set++;
 	}
-	return (s);
-}
-
-int	print_hex_up(int n)
-{
-	int		count;
-	char	*result;
-
-	result = to_upper(print_hexadecimal(n));
-	count = write_str(result);
-	return (count);
+	return (0);
 }

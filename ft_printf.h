@@ -20,6 +20,7 @@
 int		write_str(char *s);
 char	*print_hexadecimal(unsigned int n);
 int		ft_putstr(char *s);
+int		is_valid_format_string(char c);
 int		ft_printf(const char *format, ...);
 int		print_char(char c);
 int		print_string(char *str);
