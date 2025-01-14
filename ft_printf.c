@@ -41,20 +41,21 @@ int	ft_printf(const char *format, ...)
 	int		count;
 	va_list	args;
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	count = 0;
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && is_valid_format_string(*(format + 1)) == 1)
 		{
 			format++;
-			if (is_valid_format_string(*format) == 0)
-				return (-1);
 			count += argument_to_print(format, args);
 		}
 		else
 		{
-			write (1, format, 1);
+			if (write (1, format, 1) == -1)
+				return (-1);
 			count++;
 		}
 		format++;

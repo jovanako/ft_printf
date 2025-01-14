@@ -19,7 +19,11 @@ int	write_str(char *s)
 	count = 0;
 	while (s[count] != '\0')
 	{
-		write (1, &s[count], 1);
+		if (write (1, &s[count], 1) == -1)
+		{
+			free(s);
+			return (-1);
+		}
 		count++;
 	}
 	free(s);
